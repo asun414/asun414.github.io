@@ -1,6 +1,6 @@
 # Hongliang Sun Academic Website
 
-Personal academic website for Hongliang Sun / 孙红亮, designed as a lightweight urban research notebook rather than a commercial portfolio. The current canonical site is `https://hongliangsun.github.io`; `hlsun.org` can be activated later after domain ownership is purchased or confirmed.
+Personal academic website for Hongliang Sun / 孙红亮, designed as a lightweight urban research notebook rather than a commercial portfolio. The current canonical site is `https://asun414.github.io`; `hlsun.org` can be activated later after domain ownership is purchased or confirmed.
 
 ## Stack
 
