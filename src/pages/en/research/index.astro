@@ -1,4 +1,0 @@
----
-import ContentLayout from '../../../layouts/ContentLayout.astro'; import {getCollection} from 'astro:content'; const projects=(await getCollection('research')).sort((a,b)=>a.data.order-b.data.order);
----
-<ContentLayout title="Research" description="Housing systems, urban institutions, inequality, and political participation." switchHref="/research/">{projects.map((p,i)=><article class="pub"><div class="kicker">0{i+1} · {p.data.status}</div><h2>{p.data.title}</h2><p>{p.data.summary}</p><ul class="tags">{p.data.keywords.map(k=><li>{k}</li>)}</ul>{p.data.paperUrl?<a href={p.data.paperUrl}>Paper PDF</a>:i===0&&<p class="meta">Draft available upon request.</p>}</article>)}</ContentLayout>
