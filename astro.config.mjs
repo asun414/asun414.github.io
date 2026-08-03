@@ -1,4 +1,4 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
-export default defineConfig({ site: 'https://asun414.github.io', integrations: [mdx(), sitemap()] });
+export default defineConfig({ site: 'https://hlsun.org', integrations: [mdx(), sitemap()] });
