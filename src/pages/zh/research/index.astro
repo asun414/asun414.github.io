@@ -1,0 +1,4 @@
+---
+import ContentLayout from '../../../layouts/ContentLayout.astro'; import {getCollection} from 'astro:content'; const projects=(await getCollection('research')).sort((a,b)=>a.data.order-b.data.order);
+---
+<ContentLayout lang="zh" title="研究" description="住房制度、城市治理、不平等与政治参与。" switchHref="/research/">{projects.map((p,i)=><article class="pub"><div class="kicker">0{i+1} · {p.data.status}</div><h2>{p.data.titleZh}</h2><p>{p.data.summaryZh}</p><ul class="tags">{p.data.keywords.map(k=><li>{k}</li>)}</ul>{i===0&&<p class="meta">论文初稿可来信索取。</p>}</article>)}</ContentLayout>

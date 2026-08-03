@@ -1,0 +1,4 @@
+---
+const { lang='en', href=lang==='en'?'/zh/':'/' }=Astro.props;
+---
+<a class="language" href={href} hreflang={lang==='en'?'zh-CN':'en'}>{lang==='en'?'中文':'EN'}</a>

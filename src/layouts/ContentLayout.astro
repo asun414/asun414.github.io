@@ -1,0 +1,4 @@
+---
+import BaseLayout from './BaseLayout.astro'; const {title,description,lang='en',switchHref}=Astro.props;
+---
+<BaseLayout title={`${title} | Hongliang Sun`} description={description} lang={lang} switchHref={switchHref}><div class="narrow page-head"><div class="kicker">Hongliang Sun · Research notebook</div><h1 class="page-title">{title}</h1>{description&&<p class="lead">{description}</p>}</div><div class="narrow prose"><slot/></div></BaseLayout>

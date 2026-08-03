@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hlsun.org/sitemap-index.xml

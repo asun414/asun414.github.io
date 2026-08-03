@@ -1,0 +1,4 @@
+---
+const {entry,index=1,lang='en'}=Astro.props; const d=entry.data;
+---
+<article class:list={['card',{featured:d.featured&&index===1}]}><div class="kicker">0{index} · {d.status}</div><h3>{lang==='zh'?d.titleZh:d.title}</h3><p>{lang==='zh'?d.summaryZh:d.summary}</p><ul class="tags">{d.keywords.map((k:string)=><li>{k}</li>)}</ul><a href={lang==='zh'?'/zh/research/':'/research/'}>{lang==='zh'?'查看详情':'View details'} →</a></article>

@@ -1,0 +1,4 @@
+---
+import ContentLayout from '../../layouts/ContentLayout.astro'; import {getCollection} from 'astro:content'; const notes=await getCollection('notes',x=>!x.data.draft);
+---
+<ContentLayout title="Field Notes" description="A future notebook for cities, reading, field observations, talks, and research fragments.">{notes.map(n=><article class="pub"><div class="meta">Notebook introduction · {n.data.date.toISOString().slice(0,10)}</div><h2>{n.data.title}</h2><p>{n.data.description}</p><p>This entry establishes the notebook structure; it is not presented as a past personal event.</p></article>)}</ContentLayout>

@@ -1,0 +1,5 @@
+---
+import {profile} from '../data/profile'; import {socialLinks} from '../data/social-links'; const year=new Date().getFullYear();
+---
+<footer class="footer"><div class="wrap footer-grid"><div><strong>{profile.name} / {profile.nameZh}</strong><p class="muted">Shanghai<br/>Built as an evolving research notebook.</p></div><div><strong>Connect</strong>{socialLinks.map(x=><a href={x.url} target="_blank" rel="me noreferrer">{x.label}<span class="sr-only"> (opens in a new tab)</span></a>)}<a href={`mailto:${profile.email}`}>Email</a></div><div><strong>Documents</strong><a href="/cv/">CV</a><a href="#top" class="backtop">Back to top ↑</a></div></div><div class="wrap meta">© {year} Hongliang Sun</div></footer>
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>

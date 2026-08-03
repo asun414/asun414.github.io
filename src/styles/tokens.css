@@ -1,0 +1,2 @@
+:root{--paper:#f3efe6;--paper-deep:#e8e0d2;--ink:#20231f;--ink-soft:#62665e;--forest:#24483b;--forest-light:#496b5d;--vermilion:#a84a32;--line:rgba(32,35,31,.18);--serif:Georgia,"Times New Roman",serif;--sans:Inter,"Helvetica Neue",Arial,"Source Han Sans SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;--zh-serif:"Songti SC","Noto Serif CJK SC",STSong,serif;color-scheme:light}
+[data-theme="dark"]{--paper:#171b18;--paper-deep:#202620;--ink:#ece9df;--ink-soft:#b8baaf;--forest:#92b7a2;--forest-light:#aac8b6;--vermilion:#d77a60;--line:rgba(236,233,223,.2);color-scheme:dark}

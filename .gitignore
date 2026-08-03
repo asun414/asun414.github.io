@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.astro/
+work/
+screenshots/
+_backup/
+hlsun-academic-site/
+hlsun-academic-site.zip
+.DS_Store
