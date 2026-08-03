@@ -1,6 +1,6 @@
 # Hongliang Sun Academic Website
 
-Personal academic website for Hongliang Sun / 孙红亮, designed as a lightweight urban research notebook rather than a commercial portfolio. The current canonical site is `https://asun414.github.io`; `hlsun.org` can be activated later after domain ownership is purchased or confirmed.
+Personal academic website for Hongliang Sun / 孙红亮, designed as a lightweight urban research notebook rather than a commercial portfolio. The canonical site is `https://hlsun.org`; `https://www.hlsun.org` redirects to the canonical domain.
 
 ## Stack
 
@@ -23,7 +23,7 @@ Install Node.js LTS, then run:
 
 ```powershell
 Set-Location "E:\BaiduSyncdisk\个人网站"
-npm install
+corepack pnpm install
 npm run dev
 npm run check
 npm run build
@@ -63,6 +63,9 @@ In GitHub repository settings, set Pages source to **GitHub Actions**. Pushes to
 - A missing Node/npm command means Node.js LTS must be installed or added to PATH.
 - A 404 on a project-site repository usually means `site`/`base` need project-path configuration; this preset targets the custom-domain root.
 - Never link a local PDF or CV before the file exists in `public/`.
+- Dependencies are managed with pnpm; use `corepack pnpm install` after cloning or dependency changes. The familiar `npm run dev`, `npm run check`, and `npm run build` commands remain available.
 - After any content change, run `npm run check` and `npm run build`, inspect both languages, then commit and push.
 
 See `CONTENT_TODO.md` for missing public material and `DEVELOPMENT_REPORT.md` for the implementation record.
+
+For routine VS Code editing, publishing, and troubleshooting, see the Chinese maintenance handbook in [`更新与维护/README.md`](更新与维护/README.md).
