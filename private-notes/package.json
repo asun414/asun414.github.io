@@ -1,0 +1,14 @@
+{
+  "name": "hlsun-private-notes",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:local": "wrangler d1 execute hlsun-private-notes --local --file=./schema.sql",
+    "db:remote": "wrangler d1 execute hlsun-private-notes --remote --file=./schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^4.118.0"
+  }
+}

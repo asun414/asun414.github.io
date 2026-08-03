@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hlsun-private-notes",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-03",
+  "workers_dev": true,
+  "routes": [
+    {
+      "pattern": "notes.hlsun.org",
+      "custom_domain": true
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "hlsun-private-notes",
+      "database_id": "3827db4a-e5fc-4a09-94f4-d4b62a2a621d"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
