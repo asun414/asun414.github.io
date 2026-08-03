@@ -1,4 +1,29 @@
 ---
-import ContentLayout from '../../layouts/ContentLayout.astro'; import {getCollection} from 'astro:content'; const notes=await getCollection('notes',x=>!x.data.draft);
+import ContentLayout from '../../layouts/ContentLayout.astro';
 ---
-<ContentLayout title="Field Notes" description="A future notebook for cities, reading, field observations, talks, and research fragments.">{notes.map(n=><article class="pub"><div class="meta">Notebook introduction · {n.data.date.toISOString().slice(0,10)}</div><h2>{n.data.title}</h2><p>{n.data.description}</p><p>This entry establishes the notebook structure; it is not presented as a past personal event.</p></article>)}</ContentLayout>
+<ContentLayout title="Notes" description="A notebook for research in public and reflections kept in private.">
+  <div class="note-sections">
+    <article class="note-section">
+      <div class="kicker">01 / Open notebook</div>
+      <h2>Public research notes</h2>
+      <p>Reading notes, research fragments, field observations, talks, conferences, and reflections on cities and public life.</p>
+      <a class="button" href="/notes/public/">Browse public notes →</a>
+    </article>
+    <article class="note-section">
+      <div class="kicker">02 / Personal archive</div>
+      <h2>Private notes</h2>
+      <p>A private working archive. Its contents are intentionally not published on this static website.</p>
+      <a class="button" href="/notes/private/">About private notes →</a>
+    </article>
+  </div>
+</ContentLayout>
+
+<style>
+  .note-sections{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1px solid var(--line);background:var(--line);gap:1px}
+  .note-section{background:var(--paper);padding:2rem;min-height:19rem;display:flex;flex-direction:column;align-items:flex-start}
+  .note-section:nth-child(2){background:var(--paper-deep)}
+  .note-section h2{font:normal clamp(1.7rem,3vw,2.4rem)/1.15 var(--serif);margin:.8rem 0}
+  .note-section p{margin-bottom:2rem}
+  .note-section .button{margin-top:auto}
+  @media(max-width:700px){.note-sections{grid-template-columns:1fr}.note-section{min-height:0}}
+</style>

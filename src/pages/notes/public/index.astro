@@ -1,0 +1,13 @@
+---
+import ContentLayout from '../../../layouts/ContentLayout.astro';
+import {getCollection} from 'astro:content';
+const notes=(await getCollection('notes',entry=>!entry.data.draft)).sort((a,b)=>b.data.date.valueOf()-a.data.date.valueOf());
+---
+<ContentLayout title="Public research notes" description="Reading notes, field observations, talks, conferences, and research fragments shared in public.">
+  <p><a href="/notes/">← All notes</a></p>
+  {notes.length > 0 ? notes.map(note=><article class="pub">
+    <div class="meta">Research note · <time datetime={note.data.date.toISOString()}>{note.data.date.toISOString().slice(0,10)}</time></div>
+    <h2>{note.data.title}</h2>
+    <p>{note.data.description}</p>
+  </article>) : <p class="muted">No public research notes have been published yet.</p>}
+</ContentLayout>
